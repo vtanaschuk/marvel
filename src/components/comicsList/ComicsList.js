@@ -1,9 +1,24 @@
 import './comicsList.scss';
 import uw from '../../resources/img/UW.png';
 import xMen from '../../resources/img/x-men.png';
+import {useEffect} from "react";
+import useMarvelService from "../../services/MarvelService";
 
 const ComicsList = () => {
+    const {getAllComics} = useMarvelService();
 
+    useEffect(() => {
+        onRequest();
+    }, [])
+
+    const onRequest = () => {
+        getAllComics()
+            .then(onComicsListLoaded)
+    }
+
+    const onComicsListLoaded = (newComicsList) => {
+        console.log(newComicsList);
+    }
 
     return (
         <div className="comics__list">
