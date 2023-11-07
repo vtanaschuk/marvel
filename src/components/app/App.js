@@ -5,6 +5,7 @@ import CharList from "../charList/CharList";
 import CharInfo from "../charInfo/CharInfo";
 import decoration from '../../resources/img/vision.png';
 import ComicsList from "../comicsList/ComicsList";
+import AppBanner from "../appBanner/AppBanner";
 
 const App = () => {
     const [selectedChar, setChar] = useState(null)
@@ -20,6 +21,7 @@ const App = () => {
                 {/*    <CharList onCharSelected={onCharSelected}/>*/}
                 {/*    <CharInfo charId={selectedChar}/>*/}
                 {/*</div>*/}
+                <AppBanner />
                 <ComicsList />
             </main>
         </div>
