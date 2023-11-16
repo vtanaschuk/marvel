@@ -44,6 +44,7 @@ const SingleComicPage = () => {
 }
 
 const View = ({comic}) => {
+    console.log(comic);
     return (
         <>
             <img src={xMen} alt="x-men" className="single-comic__img"/>
